@@ -1,0 +1,30 @@
+[
+	{
+		"channelNumber": 500,
+		"url": "$portalUrl$/ToUrl.aspx?type=A0403"
+	}, 
+	{
+		"channelNumber": 600,
+		"url": "$portalUrl$/ToUrl.aspx?type=A0403"
+	}, 
+	{
+		"channelNumber": 700,
+		"url": "$portalUrl$/ToUrl.aspx?type=A0403"
+	}, 
+	{
+		"channelNumber": 800,
+		"url": "$portalUrl$/ToUrl.aspx?type=A0403"
+	},
+	{
+		"channelNumber": 900,
+		"url": "$portalUrl$/ToUrl.aspx?type=A0403"
+	},
+	{
+		"channelNumber": 888,
+		"url": "http://10.255.134.53:7072/templatefile/tv/liaocheng/10241/index/index.html"
+	},
+	{
+		"channelNumber": 11111,
+		"url": "$portalUrl$/ToUrl.aspx?type=A0403"
+	}
+]
