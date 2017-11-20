@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>添加虚拟频道</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link rel="stylesheet" href="./plugins/layui/css/layui.css" media="all">
+	</head>
+
+	<body>
+		<form class="layui-form" action="" style="margin-top: 20px;">
+			<div class="layui-form-item">
+				<label class="layui-form-label">频道号</label>
+				<div class="layui-input-block">
+					<input type="text" name="id" required lay-verify="required|id" placeholder="请输入频道号" class="layui-input">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">频道地址</label>
+				<div class="layui-input-block">
+					<input type="text" name="url" required lay-verify="required" placeholder="请输入频道链接地址" class="layui-input">
+				</div>
+				<div class="layui-form-mid layui-word-aux"></div>
+			</div>
+			<div class="layui-form-item" style="display: none !important";>
+				<div class="layui-input-block">
+					<button class="layui-btn" lay-submit lay-filter="formDemo" id="submit">立即提交</button>
+				</div>
+			</div>
+		</form>
+
+		<script src="./plugins/layui/layui.js"></script>
+		<script>
+			layui.use(['form'], function() {
+				var form = layui.form,
+					layer = layui.layer
+				//自定义验证规则
+				form.verify({
+					id: function(value) {
+						if(value.length < 3) {
+							return '频道号至少得3个字符';
+						}
+					}
+				});
+				//监听提交
+				form.on('submit(formDemo)', function(data) {
+					//console.log(data.field); ///当前容器的全部表单字段，名值对形式：{name: value}
+					return true;
+				});
+
+			});
+		</script>
+
+	</body>
+
+</html>
